@@ -1,0 +1,1 @@
+This folder is reserved for custom CSS if you want to add a build step for Tailwind.

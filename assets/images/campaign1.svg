@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <rect rx="12" width="320" height="200" fill="#fff" stroke="#fdecea" />
+  <g transform="translate(18,18)">
+    <rect width="120" height="120" rx="8" fill="#fff5f5" stroke="#fca5a5"/>
+    <path d="M40 20 L60 50 L20 50 Z" fill="#ef4444" />
+  </g>
+  <text x="150" y="120" font-size="18" font-family="sans-serif" fill="#7f1d1d">Campaign</text>
+</svg>

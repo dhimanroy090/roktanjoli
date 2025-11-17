@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <rect rx="12" width="320" height="200" fill="#fff" stroke="#ecfccb" />
+  <g transform="translate(18,18)">
+    <rect width="120" height="120" rx="8" fill="#f0fdf4" stroke="#86efac"/>
+    <path d="M20 80 Q60 30 100 80" fill="none" stroke="#059669" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="150" y="120" font-size="18" font-family="sans-serif" fill="#065f46">Impact</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <rect rx="12" width="320" height="200" fill="#fff" stroke="#eef2ff" />
+  <g transform="translate(18,18)">
+    <rect width="120" height="120" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+    <circle cx="60" cy="60" r="22" fill="#60a5fa" />
+  </g>
+  <text x="150" y="120" font-size="18" font-family="sans-serif" fill="#1e3a8a">Awareness</text>
+</svg>

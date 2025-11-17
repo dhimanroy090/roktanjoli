@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>রক্তাঞ্জলি ব্লাড ব্যাংক — রক্ত দান ও অনুরোধ</title>
+    <meta name="description" content="রক্তাঞ্জলি ব্লাড ব্যাংক — রক্ত দান করুন, প্রয়োজন হলে ডোনার খুঁজুন।" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="assets/logo.svg" />
+  </head>
+  <body class="bg-gray-50 text-gray-800 leading-relaxed">
+    <header class="site-header fixed w-full z-30 bg-white/80 backdrop-blur-sm border-b">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.svg" alt="রক্তাঞ্জলি লোগো" class="w-10 h-10" />
+          <div class="hidden sm:block">
+            <div class="text-lg font-bold text-red-700">রক্তাঞ্জলি ব্লাড ব্যাংক</div>
+            <div class="text-xs text-gray-500">রক্ত নয় — দিচ্ছি জীবনের অঞ্জলি</div>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center gap-6">
+          <nav class="flex gap-6 mr-4 text-sm" aria-label="Primary">
+            <a href="#home" class="text-gray-700 hover:text-red-600">হোম</a>
+            <a href="#about" class="text-gray-700 hover:text-red-600">আমাদের কথা</a>
+            <a href="#donor" class="text-gray-700 hover:text-red-600">ডোনার</a>
+            <a href="#find" class="text-gray-700 hover:text-red-600">ডোনর খুঁজুন</a>
+            <a href="#campaigns" class="text-gray-700 hover:text-red-600">ক্যাম্পেইন</a>
+            <a href="#resources" class="text-gray-700 hover:text-red-600">রিসোর্স</a>
+            <a href="#contact" class="text-gray-700 hover:text-red-600">যোগাযোগ</a>
+          </nav>
+          <a href="#donor" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-red-700 transition">Donate Blood</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="mobileNavToggle" aria-label="মেনু" class="p-2 rounded-md border">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileNav" class="md:hidden px-4 pb-3 hidden bg-white border-t">
+        <nav class="flex flex-col gap-2">
+          <a href="#home" class="text-gray-700 py-2">হোম</a>
+          <a href="#about" class="text-gray-700 py-2">আমাদের কথা</a>
+          <a href="#donor" class="text-gray-700 py-2">ডোনার</a>
+          <a href="#find" class="text-gray-700 py-2">ডোনর খুঁজুন</a>
+          <a href="#campaigns" class="text-gray-700 py-2">ক্যাম্পেইন</a>
+          <a href="#resources" class="text-gray-700 py-2">রিসোর্স</a>
+          <a href="#contact" class="text-gray-700 py-2">যোগাযোগ</a>
+          <a href="#donor" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold inline-block">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home" class="pt-24">
+      <!-- Hero + Live Stats -->
+      <section class="bg-gradient-to-b from-red-50 to-white">
+        <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div class="lg:col-span-2">
+            <div class="relative rounded-lg overflow-hidden shadow-lg">
+              <img src="https://roktanjalidnj.my.canva.site/roktanjalibloodbankdnj2025/_assets/media/df73515cb84dca4c87bd0e5b43417fdb.png" alt="banner" class="mx-auto w-full h-72 md:h-96 object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent to-red-900/40"></div>
+              <div class="absolute inset-0 flex flex-col justify-center items-start p-6 md:p-12">
+                <h1 class="text-3xl md:text-5xl font-bold text-white">রক্তাঞ্জলি ব্লাড ব্যাংক</h1>
+                <p class="mt-3 text-white/90 max-w-2xl">রক্ত দান করুন, জীবন বাঁচান। জরুরি প্রয়োজনে ডোনার খুঁজুন — দেশব্যাপী সেবা।</p>
+                <div class="mt-6 flex gap-3">
+                  <a href="#donor" class="bg-white text-red-600 px-4 py-3 rounded-md font-semibold shadow">Donate Blood</a>
+                  <a href="#find" class="bg-red-600 text-white px-4 py-3 rounded-md font-semibold shadow">Find a Donor</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-lg font-semibold text-red-700">লাইভ স্টাটস</h3>
+            <div class="mt-4 grid grid-cols-1 gap-4">
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-gray-600">রেজিস্টার্ড ডোনার</div>
+                <div id="stat-donors" class="text-xl font-bold text-red-600">—</div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-gray-600">সংগ্রহকৃত ইউনিট</div>
+                <div id="stat-units" class="text-xl font-bold text-red-600">—</div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-gray-600">ক্যাম্পেইন</div>
+                <div id="stat-campaigns" class="text-xl font-bold text-red-600">—</div>
+              </div>
+            </div>
+            <div class="mt-6">
+              <a href="#campaigns" class="block text-center bg-red-600 text-white px-4 py-2 rounded-md">Upcoming Drives</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- About Us -->
+      <section id="about" class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl font-bold">আমাদের লক্ষ্য ও ইতিহাস</h2>
+            <p class="mt-3 text-gray-700">রক্তাঞ্জলি ব্লাড ব্যাংক একটি স্বেচ্ছাসেবী সংগঠন, যা দেশের প্রতিটি প্রান্তে নিরাপদ রক্ত সরবরাহ নিশ্চিত করতে কাজ করে। আমাদের স্লোগান: "রক্ত নয় — জীবনের অঞ্জলি"।</p>
+
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white p-4 rounded shadow">
+                <h3 class="font-semibold text-red-600">মিশন</h3>
+                <p class="text-sm text-gray-600 mt-2">জরুরি মুহূর্তে দ্রুত, নিরাপদ এবং নির্ভরযোগ্য রক্ত সরবরাহ নিশ্চিত করা।</p>
+              </div>
+              <div class="bg-white p-4 rounded shadow">
+                <h3 class="font-semibold text-red-600">ভিশন</h3>
+                <p class="text-sm text-gray-600 mt-2">একটি সুসংগঠিত স্বেচ্ছাসেবী নেটওয়ার্ক যার মাধ্যমে প্রত্যেক রোগীর প্রয়োজনীয় রক্ত সহজেই পাওয়া যাবে।</p>
+              </div>
+            </div>
+
+            <div class="mt-6 p-4 rounded shadow bg-white">
+              <h3 class="font-semibold">ইতিহাস, লক্ষ্য ও কার্যক্রম (সংক্ষিপ্ত)</h3>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+                <div>
+                  <p class="text-gray-700">রক্তাঞ্জলি ব্লাড ব্যাংক নিয়মিতভাবে ব্লাড ক্যাম্প আয়োজন করে, রক্ত সংগ্রহ ও প্রয়োজন অনুসারে দ্রুত দাতা–গ্রহীতা সমন্বয় করে থাকে। আমাদের লক্ষ্য — সময়মতো নিরাপদ রক্ত সরবরাহ করে জীবন রক্ষা করা।</p>
+                  <ul class="mt-3 list-disc list-inside text-gray-700">
+                    <li>৫০০+ সফল ব্লাড ক্যাম্প</li>
+                    <li>১৫,০০০+ ইউনিট সংগ্রহ</li>
+                    <li>দেশব্যাপী প্রায় ১০০০+ নিবন্ধিত ডোনার</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-red-600">আমাদের মূল কার্যক্রম</h4>
+                  <ul class="mt-2 text-gray-700 list-inside space-y-2">
+                    <li>• রক্তের চাহিদা যাচাই ও নিশ্চিতকরণ</li>
+                    <li>• উপযুক্ত রক্তদাতা খুঁজে বের করা (ডেটাবেজ ও নেটওয়ার্ক)</li>
+                    <li>• দাতা–গ্রহীতা সমন্বয় ও যোগাযোগ</li>
+                    <li>• রক্তদান প্রক্রিয়ায় নিরাপত্তা ও সহায়তা</li>
+                    <li>• হাসপাতাল/পরিবারে রক্ত সরবরাহ</li>
+                    <li>• ফ্রি ব্লাড ক্যাম্প আয়োজন ও জনসচেতনতা বৃদ্ধি</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside>
+            <div class="bg-red-50 p-4 rounded shadow text-center">
+              <div class="text-sm text-gray-600">সাহায্যের প্রয়োজন?</div>
+              <div class="text-2xl font-bold text-red-600 mt-2">০১৭৩৩০১৩৭৮৩</div>
+              <div class="text-xs text-gray-500 mt-1">(হেল্পলাইন — ২৪/৭)</div>
+            </div>
+            <div class="mt-4 bg-white p-4 rounded shadow text-center">
+              <h4 class="font-semibold">যোগাযোগ</h4>
+              <p class="text-sm text-gray-600 mt-2">info@roktanjoli.org</p>
+              <div class="mt-3 flex justify-center gap-3">
+                <a href="#" aria-label="facebook" class="text-blue-600">Facebook</a>
+                <a href="#" aria-label="youtube" class="text-red-600">YouTube</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Donor Section -->
+      <section id="donor" class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div class="lg:col-span-2">
+              <h2 class="text-2xl font-bold">ডোনার রেজিস্ট্রেশন</h2>
+              <p class="mt-2 text-gray-700">আপনি যদি রক্ত দানের উপযুক্ত হন, অনুগ্রহ করে নিচের ফরমটি পূরণ করুন — এটি জরুরি সময় আপনাকে দ্রুত পাওয়া সহজ করবে।</p>
+
+              <form id="donorForm" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 bg-red-50 p-4 rounded">
+                <input name="name" id="d_name" class="border rounded px-3 py-2" placeholder="পূর্ণ নাম" required />
+                <input name="phone" id="d_phone" class="border rounded px-3 py-2" placeholder="ফোন নম্বর" required />
+                <input name="email" id="d_email" class="border rounded px-3 py-2" placeholder="ইমেইল (ঐচ্ছিক)" />
+                <select name="blood" id="d_blood" class="border rounded px-3 py-2" required>
+                  <option value="">রক্তের গ্রুপ নির্বাচন</option>
+                  <option>A+">A+</option>
+                  <option>A-">A-</option>
+                  <option>B+">B+</option>
+                  <option>B-">B-</option>
+                  <option>O+">O+</option>
+                  <option>O-">O-</option>
+                  <option>AB+">AB+</option>
+                  <option>AB-">AB-</option>
+                </select>
+                <input name="city" id="d_city" class="border rounded px-3 py-2" placeholder="শহর/জেলা" />
+                <input name="last_donation" id="d_last" type="date" class="border rounded px-3 py-2" placeholder="শেষ রক্তদান" />
+                <div class="md:col-span-2">
+                  <label class="flex items-center gap-2"><input id="d_agree" type="checkbox" /> আমি যোগ্য এবং সবার স্বাস্থ্য সুরক্ষার জন্য প্রস্তুত।</label>
+                </div>
+                <div class="md:col-span-2">
+                  <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">Register as Donor</button>
+                </div>
+              </form>
+
+              <div class="mt-6">
+                <h3 class="font-semibold">ডোনার যোগ্যতা</h3>
+                <ul class="list-disc list-inside mt-2 text-gray-700">
+                  <li>বয়স ১৮-৬৫ বছর</li>
+                  <li>সাম্প্রতিক কালে চিকিত্সা না পাওয়া</li>
+                  <li>তারপরও উপযুক্ততা নির্ণয়ের জন্য ফর্ম পূরণ করুন</li>
+                </ul>
+              </div>
+            </div>
+
+            <aside>
+              <h3 class="text-lg font-semibold">টেস্টিমোনিয়াল</h3>
+              <div class="mt-3 space-y-3">
+                <div class="bg-gray-50 p-3 rounded shadow">“আমি রক্তাঞ্জলির মাধ্যমে দান করেছি — সহজ এবং দায়িত্বশীল।” — রাহিম</div>
+                <div class="bg-gray-50 p-3 rounded shadow">“শিবিরটি খুব ভালোভাবে আয়োজন করা হয়।” — সজল</div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Find Donor / Request -->
+      <section id="find" class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-2xl font-bold">রক্তের অনুরোধ / ডোনার খুঁজুন</h2>
+            <p class="mt-2 text-gray-700">রক্ত গ্রুপ এবং অবস্থান অনুযায়ী ডোনার খুঁজুন — অথবা হাসপাতালের পক্ষ থেকে অনুরোধ পাঠান।</p>
+
+            <div class="mt-4 bg-white p-4 rounded shadow">
+              <form id="searchForm" class="grid grid-cols-1 md:grid-cols-3 gap-3 items-end">
+                <div>
+                  <label class="block text-sm text-gray-600">রক্তের গ্রুপ</label>
+                  <select id="bloodGroup" class="mt-1 block w-full rounded-md border-gray-200">
+                    <option value="">সব গ্রুপ</option>
+                    <option>A+">A+</option>
+                    <option>A-">A-</option>
+                    <option>B+">B+</option>
+                    <option>B-">B-</option>
+                    <option>O+">O+</option>
+                    <option>O-">O-</option>
+                    <option>AB+">AB+</option>
+                    <option>AB-">AB-</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm text-gray-600">শহর / জেলা</label>
+                  <input id="city" type="text" placeholder="যেমন: ঢাকা" class="mt-1 block w-full rounded-md border-gray-200" />
+                </div>
+                <div>
+                  <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-md font-semibold">ডোনার খুঁজুন</button>
+                </div>
+              </form>
+
+              <div id="results" class="mt-4"></div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold">হাসপাতাল / রোগীর অনুরোধ</h3>
+            <form id="requestForm" class="mt-4 bg-red-50 p-4 rounded">
+              <input id="r_name" class="border rounded px-3 py-2 w-full mb-2" placeholder="রোগীর নাম / হাসপাতাল" required />
+              <input id="r_phone" class="border rounded px-3 py-2 w-full mb-2" placeholder="ফোন" required />
+              <select id="r_blood" class="border rounded px-3 py-2 w-full mb-2" required>
+                <option value="">রক্তের গ্রুপ</option>
+                <option>A+">A+</option>
+                <option>A-">A-</option>
+                <option>B+">B+</option>
+                <option>B-">B-</option>
+                <option>O+">O+</option>
+                <option>O-">O-</option>
+                <option>AB+">AB+</option>
+                <option>AB-">AB-</option>
+              </select>
+              <textarea id="r_note" class="border rounded px-3 py-2 w-full mb-2" rows="3" placeholder="অতিরিক্ত বিস্তারিত"></textarea>
+              <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">অনুরোধ জমা দিন</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Campaigns / Events -->
+      <section id="campaigns" class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl font-bold">ক্যাম্পেইন ও ইভেন্ট</h2>
+          <p class="mt-2 text-gray-700">আসন্ন ও অতীত শিবিরের তালিকা। অংশগ্রহণ করতে রেজিস্টার করুন।</p>
+
+          <!-- Campaign images carousel (auto slider) -->
+          <div class="mt-6">
+            <div id="campaignCarousel" class="relative overflow-hidden rounded-lg">
+              <div class="carousel-slides relative w-full h-56 md:h-72">
+                <img class="carousel-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" src="assets/images/kali-puja.svg" alt="কালী পূজা" />
+                <img class="carousel-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" src="assets/images/kantaji.svg" alt="কান্তজিউ মন্দির" />
+              </div>
+              <div class="absolute left-0 right-0 bottom-3 flex justify-center gap-2">
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white/60 ring-1 ring-white" aria-label="slide-1"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white/40 ring-1 ring-white" aria-label="slide-2"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-red-50 p-4 rounded shadow">
+              <h3 class="font-semibold">ঢাকা — ফ্রি ব্লাড ক্যাম্প</h3>
+              <p class="text-sm text-gray-600 mt-2">তারিখ: ২০২৫-১২-০৫</p>
+              <button class="mt-4 bg-red-600 text-white px-3 py-2 rounded" data-event="Dhaka-Dec">রেজিস্টার</button>
+            </div>
+            <div class="bg-red-50 p-4 rounded shadow">
+              <h3 class="font-semibold">চট্টগ্রাম — স্বাস্থ্য ক্যাম্প</h3>
+              <p class="text-sm text-gray-600 mt-2">তারিখ: ২০২৬-০১-১০</p>
+              <button class="mt-4 bg-red-600 text-white px-3 py-2 rounded" data-event="Chittagong-Jan">রেজিস্টার</button>
+            </div>
+            <div class="bg-red-50 p-4 rounded shadow">
+              <h3 class="font-semibold">দিনাজপুর — কমিউনিটি ড্রাইভ</h3>
+              <p class="text-sm text-gray-600 mt-2">তারিখ: ২০২৫-১১-২৫</p>
+              <button class="mt-4 bg-red-600 text-white px-3 py-2 rounded" data-event="Dinajpur-Nov">রেজিস্টার</button>
+            </div>
+          </div>
+
+          <!-- Added campaign attachment content -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="bg-white p-6 rounded shadow flex flex-col gap-6">
+              <img src="assets/images/kali-puja.svg" alt="কালী পূজা ব্লাড ক্যাম্প" class="w-full h-40 object-cover rounded" />
+              <div>
+                <h3 class="text-xl font-semibold">কালী পূজা উপলক্ষে ফ্রি ব্লাড ক্যাম্পিং</h3>
+                <p class="mt-2 text-gray-700">রক্তাঞ্জলি ব্লাড ব্যাংক, বাংলাদেশ — দিনাজপুর শাখার উদ্যোগে কালী পূজা উপলক্ষে অনুষ্ঠিত ফ্রি ব্লাড ক্যাম্পে বিভিন্ন স্বাস্থ্যসেবা প্রদানের সাথে সাথে রক্ত সংগ্রহ করা হয়।</p>
+                <p class="mt-2 text-gray-600">উক্ত আয়োজনে কার্যক্রম ছিল:
+                <ul class="list-decimal list-inside mt-2 text-gray-700">
+                  <li>ফ্রি রক্ত পরীক্ষা</li>
+                  <li>ডায়াবেটিস পরীক্ষা</li>
+                  <li>প্রেসার পরিমাপ ও ওজন পরিমাপ</li>
+                </ul>
+                </p>
+                <p class="mt-2 text-gray-700">ইভেন্টে শতাধিক মানুষ অংশ নেয়; ১১০+ মানুষের ব্লাড পরীক্ষা, ডায়াবেটিস ও প্রেসার পরিমাপ সম্পন্ন করা হয়েছিল।</p>
+              </div>
+            </article>
+
+            <article class="bg-white p-6 rounded shadow flex flex-col gap-6">
+              <img src="assets/images/kantaji.svg" alt="কান্তজিউ মন্দির ফ্রি ব্লাড ক্যাম্প" class="w-full h-40 object-cover rounded" />
+              <div>
+                <h3 class="text-xl font-semibold">কান্তজিউ মন্দির প্রাঙ্গণে ফ্রি ব্লাড ক্যাম্পিং</h3>
+                <p class="mt-2 text-gray-700">রক্তাঞ্জলি ব্লাড ব্যাংক, কেন্দ্রীয় কার্যনির্বাহী সংসদের পরিচালনায় কান্তজিউ মন্দির প্রাঙ্গণে আয়োজিত এই ক্যাম্পিংয়ে স্থানীয় স্বেচ্ছাসেবীরা সক্রিয়ভাবে অংশগ্রহণ করেন।</p>
+                <p class="mt-2 text-gray-700">উন্নত ব্যবস্থাপনার মাধ্যমে রোগীর প্রয়োজন ও দাতাদের তথ্য যাচাই করে নিরাপদভাবে রক্ত সংগ্রহ ও হাসপাতালে সরবরাহ করা হয়েছে।</p>
+                <p class="mt-2 text-gray-700">ধন্যবাদ সকল স্বেচ্ছাসেবক, দাতা ও সহযোগীদের— যাদের ভালোবাসা ও সহায়তায় আয়োজন সফল হয়েছে।</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources / FAQ -->
+      <section id="resources" class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-2xl font-bold">রিসোর্স ও শিক্ষা</h2>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded shadow">
+            <h3 class="font-semibold">প্রশ্নোত্তর (FAQ)</h3>
+            <details class="mt-3"><summary class="cursor-pointer">কীভাবে রক্ত দান করবো?</summary><p class="mt-2 text-gray-700">রক্তদানের আগে হালকা খাবার গ্রহণ করুন, পরিচিত হাসপাতালে যোগাযোগ করুন বা আমাদের শিবিরে আসুন।</p></details>
+            <details class="mt-3"><summary class="cursor-pointer">ডোনার কোন গোষ্ঠী সবচেয়ে চাহিদা বেশি?</summary><p class="mt-2 text-gray-700">সকল গ্রুপের চাহিদা থাকে; পরিস্থিতি অনুযায়ী O- ও O+ এর চাহিদা বেশি হতে পারে।</p></details>
+          </div>
+
+          <div class="bg-white p-4 rounded shadow">
+            <h3 class="font-semibold">সুরক্ষা নির্দেশিকা</h3>
+            <ul class="list-disc list-inside mt-2 text-gray-700">
+              <li>প্রত্যেক দাতাকে প্রাথমিক স্বাস্থ্য পরীক্ষা করা হয়</li>
+              <li>স্থায়ী মেডিকেল ইত্যাদি প্রদানের পরামর্শ</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / Support -->
+      <section id="contact" class="bg-red-50 py-12">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded shadow">
+            <h2 class="text-2xl font-bold">যোগাযোগ ও সাপোর্ট</h2>
+            <p class="mt-2 text-gray-700">হেল্পলাইন এবং আমাদের অফিস এলাকা নিচে দেওয়া আছে।</p>
+            <div class="mt-4">
+              <p class="font-semibold">হেল্পলাইন: <span class="text-red-600">০১৭৩৩০১৩৭৮৩</span></p>
+              <p class="mt-2">ইমেইল: info@roktanjoli.org</p>
+              <p class="mt-2">ঠিকানা: ঢাকা, বাংলাদেশ</p>
+            </div>
+            <div class="mt-4">
+              <form id="contactForm" class="grid gap-3">
+                <input id="c_name" class="border rounded px-3 py-2" placeholder="আপনার নাম" />
+                <input id="c_email" class="border rounded px-3 py-2" placeholder="ইমেইল" />
+                <textarea id="c_message" class="border rounded px-3 py-2" rows="4" placeholder="মেসেজ"></textarea>
+                <button id="sendMsg" type="button" class="bg-red-600 text-white px-4 py-2 rounded">পাঠান</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded shadow">
+            <h3 class="font-semibold">আমাদের অবস্থান</h3>
+            <div class="mt-3 w-full h-64 bg-gray-200 rounded overflow-hidden">
+              <!-- Placeholder map; replace with Google Maps iframe or embed -->
+              <iframe title="office-map" src="https://www.openstreetmap.org/export/embed.html?bbox=90.3603%2C23.7000%2C90.4200%2C23.7400&amp;layer=mapnik" style="width:100%;height:100%;border:0"></iframe>
+            </div>
+            <div class="mt-4">
+              <h4 class="font-semibold">নিউজলেটার</h4>
+              <form id="newsletterForm" class="mt-2 flex gap-2">
+                <input id="newsletterEmail" type="email" class="border rounded px-3 py-2 flex-1" placeholder="আপনার ইমেইল" />
+                <button type="button" id="subscribeBtn" class="bg-red-600 text-white px-3 py-2 rounded">সাইন আপ</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-white border-t">
+      <div class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+        <div>© 2025 রক্তাঞ্জলি ব্লাড ব্যাংক</div>
+        <div class="text-center">
+          <a href="#" class="text-sm text-gray-600 mr-4">Privacy Policy</a>
+          <a href="#" class="text-sm text-gray-600">Terms</a>
+        </div>
+        <div class="flex justify-end gap-4">
+          <a href="#" class="text-blue-600">Facebook</a>
+          <a href="#" class="text-pink-600">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FAQ before footer (compact) -->
+    <section id="faq" class="max-w-6xl mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold">প্রশ্নোত্তর (FAQ)</h2>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <details class="bg-white p-4 rounded shadow"><summary class="font-semibold">আমি কীভাবে রক্ত দান করতে পারি?</summary><p class="mt-2 text-gray-700">রক্তদানের জন্য আমাদের ডোনার রেজিস্ট্রেশন ফর্ম পূরণ করুন অথবা নিকটস্থ ক্যাম্পে এসে অংশ নিতে পারেন।</p></details>
+        <details class="bg-white p-4 rounded shadow"><summary class="font-semibold">আমি রক্তদাতা হওয়ার যোগ্য কি না?</summary><p class="mt-2 text-gray-700">প্রাথমিক যোগ্যতার শর্তগুলো বয়স ১৮-৬৫, ভালো স্বাস্থ্যের প্রয়োজন; বিস্তারিত শর্ত ফর্মে উল্লেখ রয়েছে।</p></details>
+        <details class="bg-white p-4 rounded shadow"><summary class="font-semibold">জরুরি মুহূর্তে কিভাবে অনুরোধ পাঠাবো?</summary><p class="mt-2 text-gray-700">হাসপাতাল/রোগীর পরিবারের প্রতিনিধি আমাদের অনুরোধ ফর্ম মাধ্যমে তথ্য জমা দিতে পারবেন অথবা হেল্পলাইনে কল করুন।</p></details>
+        <details class="bg-white p-4 rounded shadow"><summary class="font-semibold">ডোনারকে কিভাবে পাওয়া যাবে?</summary><p class="mt-2 text-gray-700">আমাদের ডেটাবেজ ও স্বেচ্ছাসেবী নেটওয়ার্ক ব্যবহার করে দ্রুত মেল, কল বা SMS/WhatsApp এর মাধ্যমে ডোনারদের সাথে যোগাযোগ করা হয়।</p></details>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

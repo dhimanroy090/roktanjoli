@@ -53,8 +53,8 @@ input:focus, textarea:focus, select:focus { outline: none; box-shadow: 0 0 0 3px
 .compact-list li { margin-top: 0.35rem; }
 .small-icon { width:1.15rem; height:1.15rem; display:inline-block; vertical-align:middle; margin-right:0.5rem; }
 
-/* Carousel styles for campaigns */
-#campaignCarousel { background: #f8fafc; }
+/* Carousel styles for campaigns and card carousels */
+.card-carousel, .carousel { background: #f8fafc; }
 .carousel-slides { position: relative; }
 .carousel-slide { opacity: 0; transform: translateZ(0); }
 .carousel-slide.show { opacity: 1; }

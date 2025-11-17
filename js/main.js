@@ -114,31 +114,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // show live stats
   updateLiveStats();
-  // init campaign carousel
-  initCampaignCarousel();
+  // init per-card carousels
+  initCardCarousels();
 });
 
-// Campaign carousel (auto slider)
-function initCampaignCarousel() {
-  const carousel = document.getElementById('campaignCarousel');
-  if (!carousel) return;
-  const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
-  const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
-  let idx = 0;
-  let timer = null;
-  function show(i) {
-    slides.forEach((s,si) => s.classList.toggle('show', si === i));
-    dots.forEach((d,di) => d.classList.toggle('active', di === i));
-  }
-  function next() { idx = (idx + 1) % slides.length; show(idx); }
-  // start
-  show(idx);
-  timer = setInterval(next, 4000);
-  // pause on hover
-  carousel.addEventListener('mouseenter', () => { clearInterval(timer); timer = null; });
-  carousel.addEventListener('mouseleave', () => { if (!timer) timer = setInterval(next, 4000); });
-  // dot click
-  dots.forEach((d, i) => d.addEventListener('click', () => { idx = i; show(idx); }));
+// initialize all .card-carousel elements with independent autoplay
+function initCardCarousels() {
+  const carousels = Array.from(document.querySelectorAll('.card-carousel'));
+  carousels.forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
+    if (slides.length === 0) return;
+    let idx = 0;
+    let timer = null;
+    function show(i) {
+      slides.forEach((s, si) => s.classList.toggle('show', si === i));
+      dots.forEach((d, di) => d.classList.toggle('active', di === i));
+    }
+    function next() { idx = (idx + 1) % slides.length; show(idx); }
+    show(idx);
+    timer = setInterval(next, 4000);
+    carousel.addEventListener('mouseenter', () => { clearInterval(timer); timer = null; });
+    carousel.addEventListener('mouseleave', () => { if (!timer) timer = setInterval(next, 4000); });
+    dots.forEach((d, i) => d.addEventListener('click', () => { idx = i; show(idx); }));
+  });
 }
 
 // register donor (stores in localStorage for demo)
